@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System;
 using UnityEngine.UI;
 
 namespace Inventory
@@ -29,7 +28,6 @@ namespace Inventory
 		#endregion
 
 		#region Unity Callbacks
-		// Start is called before the first frame update
 		void Start()
 		{
 			InitializeItems();
@@ -39,7 +37,7 @@ namespace Inventory
 			_useButton.onClick.AddListener(UseCurrentItem);
 			_sellButton.onClick.AddListener(SellCurrentItem);
 		}
-		
+
 		#endregion
 
 		#region Public Methods

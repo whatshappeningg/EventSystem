@@ -1,4 +1,3 @@
-
 using System;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ namespace Inventory
 	public interface IConsumable { }
 
 	[Serializable]
-	public class Food : Item, IUsable, ISellable,IConsumable
+	public class Food : Item, IUsable, ISellable, IConsumable
 	{
 		#region Properties
 		[field: SerializeField] public float HealingPoints { get; set; }

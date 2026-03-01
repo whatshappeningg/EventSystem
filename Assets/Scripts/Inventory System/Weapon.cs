@@ -10,9 +10,6 @@ namespace Inventory
 		[field: SerializeField] public float Damage { get; set; }
 		#endregion
 
-		#region Fields
-		#endregion
-
 		#region Public Methods
 		public void Attack()
 		{
@@ -23,9 +20,6 @@ namespace Inventory
 		{
 			Attack();
 		}
-		#endregion
-
-		#region Private Methods
 		#endregion
 	}
 }

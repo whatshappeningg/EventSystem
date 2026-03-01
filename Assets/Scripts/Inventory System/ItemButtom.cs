@@ -4,8 +4,6 @@ using UnityEngine.UI;
 using TMPro;
 namespace Inventory
 {
-
-
 	public class ItemButtom : MonoBehaviour
 	{
 		#region Properties
@@ -32,7 +30,6 @@ namespace Inventory
 		#endregion
 
 		#region Unity Callbacks
-		// Start is called before the first frame update
 		void Awake()
 		{
 			_button = GetComponent<Button>();
@@ -44,5 +41,4 @@ namespace Inventory
 		#endregion
 
 	}
-
 }

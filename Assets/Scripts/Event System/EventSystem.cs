@@ -1,11 +1,7 @@
 using UnityEngine;
-using System;
 
 public class EventSystem : MonoBehaviour
 {
-	#region Properties
-	#endregion
-
 	#region Fields
 	[SerializeField] private InputSystem _inputSystem;
 
@@ -57,5 +53,6 @@ public class EventSystem : MonoBehaviour
 	{
 		_ui.UpdateLevel(_points.CurrentLevel);
 	}
+
 	#endregion
 }

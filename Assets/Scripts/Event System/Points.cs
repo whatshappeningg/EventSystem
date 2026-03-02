@@ -1,5 +1,5 @@
-using System;
 using UnityEngine;
+using System;
 
 public class Points : MonoBehaviour
 {
@@ -28,5 +28,6 @@ public class Points : MonoBehaviour
 			OnAddLevel?.Invoke();
 		}
 	}
+
 	#endregion
 }

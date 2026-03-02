@@ -2,14 +2,15 @@ using UnityEngine;
 using System;
 
 public class Health : MonoBehaviour
-{    
-    #region Properties
-	public float CurrentHealth { 
-		get 
+{
+	#region Properties
+	public float CurrentHealth
+	{
+		get
 		{
 			return _currentHealth;
 		}
-		set 
+		set
 		{
 			_currentHealth = value;
 
@@ -21,11 +22,11 @@ public class Health : MonoBehaviour
 
 			if (value > _maxHealth)
 				_currentHealth = _maxHealth;
-		} 
+		}
 	}
 
-	public event Action OnGetDamage;
-	public event Action OnGetHeal;
+	// public event Action OnGetDamage;
+	// public event Action OnGetHeal;
 	public event Action OnDie;
 
 	#endregion
@@ -39,11 +40,10 @@ public class Health : MonoBehaviour
 	#endregion
 
 	#region Unity Callbacks
-	// Start is called before the first frame update
 	void Start()
-    {
+	{
 		CurrentHealth = _maxHealth;
-		
+
 	}
 
 	//Update is called once per frame
@@ -64,7 +64,7 @@ public class Health : MonoBehaviour
 		{
 			CurrentHealth -= damage;
 			//Damage Event Emiter
-			OnGetDamage?.Invoke();
+			//OnGetDamage?.Invoke();
 		}
 	}
 	public void GetHeal(float life)
@@ -73,7 +73,7 @@ public class Health : MonoBehaviour
 		{
 			CurrentHealth += life;
 			//Heal Event Emiter
-			OnGetHeal?.Invoke();
+			//OnGetHeal?.Invoke();
 		}
 	}
 	#endregion

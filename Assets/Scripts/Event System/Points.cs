@@ -2,19 +2,19 @@ using UnityEngine;
 using System;
 
 public class Points : MonoBehaviour
-{    
-    #region Properties
+{
+	#region Properties
 	public int CurrentPoints { get; set; }
-	public event Action OnGetPoints;
+	//public event Action OnGetPoints;
 
 	#endregion
 
 	#region Unity Callbacks
 	// Start is called before the first frame update
 	void Start()
-    {
+	{
 		CurrentPoints = 0;
-    }
+	}
 
 	//private void Update()
 	//{
@@ -27,7 +27,7 @@ public class Points : MonoBehaviour
 	public void AddPoints(int pointsToAdd)
 	{
 		CurrentPoints += pointsToAdd;
-		OnGetPoints?.Invoke();
+		//OnGetPoints?.Invoke();
 	}
 	#endregion
 }

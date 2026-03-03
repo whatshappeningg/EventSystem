@@ -10,7 +10,7 @@ namespace Inventory
         #endregion
 
         #region Unity Callbacks
-        void Start()
+        void Awake()
         {
             _inventorySystem.OnInitialize += OnInitializeUI;
             _inventorySystem.OnConsumeItem += OnDestroyButton;
